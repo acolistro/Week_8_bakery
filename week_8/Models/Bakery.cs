@@ -13,13 +13,13 @@ namespace Bakery.Models
       Price = price;
     }
 
-    
+
   }
 
   public class Pastry
   {
-      public string PastryType{ get: set: }
-      public string Price{ get; set; }
+      public string PastryType{ get; set; }
+      public int Price{ get; set; }
 
       public Pastry(string pastryType, int price)
       {
