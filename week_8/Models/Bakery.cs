@@ -13,6 +13,10 @@ namespace Bakery.Models
       Price = price;
     }
 
+    // public int Bogo()
+    // {
+        
+    // }
 
   }
 
