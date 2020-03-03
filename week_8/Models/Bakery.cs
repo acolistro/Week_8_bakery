@@ -4,16 +4,16 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    public string BreadType{ get; set; }
+//     public string BreadType{ get; set; }
     public int Price{ get; set; }
 
-    public Bread(string breadType, int price)
+    public Bread(int price)
     {
-      BreadType = breadType;
+    //   BreadType = breadType;
       Price = price;
     }
 
-    public int Bogo(int breadsTotal)
+    public void Bogo(int breadsTotal)
     {
         int breadsCost = 0;
        if (breadsTotal % 2 == 0)
@@ -24,7 +24,6 @@ namespace Bakery.Models
        {
           breadsCost = ((((breadsTotal -1)/2)*5)+5);   
        }
-       return breadsCost;
     }
 
   }

@@ -8,3 +8,4 @@ C:\Users\arcol\Desktop\week_8\bin\Debug\netcoreapp2.2\Bakery.dll
 C:\Users\arcol\Desktop\week_8\bin\Debug\netcoreapp2.2\Bakery.pdb
 C:\Users\arcol\Desktop\week_8\obj\Debug\netcoreapp2.2\Bakery.dll
 C:\Users\arcol\Desktop\week_8\obj\Debug\netcoreapp2.2\Bakery.pdb
+C:\Users\arcol\Desktop\week_8\obj\Debug\netcoreapp2.2\Bakery.csproj.CoreCompileInputs.cache

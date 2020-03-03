@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Bakery.Models;
 
 namespace Bakery.Models
@@ -8,6 +9,8 @@ namespace Bakery.Models
   {
     static void Main()
     {
+      Bread newBreadOrder = new Bread(5);
+      Order newOrder = new Order(0,0,0);
       Console.WriteLine("Welcome to Fresh Out the Coven Bakery!");
       Console.WriteLine("Please take a look at our menu before placing your order:");
       Console.WriteLine("===========================================");
@@ -27,15 +30,14 @@ namespace Bakery.Models
       Console.WriteLine("            Pastries 3 for $5              ");
       Console.WriteLine("===========================================");
       Console.WriteLine("      Please place your order here:        ");
-      Console.WriteLine("How many BREADS would you like?            ");
+      Console.WriteLine("Please list the BREADS you would you like, separated by commas:");
       string breads = Console.ReadLine();
-      int breadsTotal = int.Parse(breads);
-      
+      newOrder.newBreadsOrder(breads);
       Console.WriteLine("How many PASTRIES would you like?");
       string pastry = Console.ReadLine();
       int pastryTotal = int.Parse(pastry);
       Console.WriteLine("Processing order...");
-      Console.WriteLine("The cost of your breads is $");
+    //   Console.WriteLine("The cost of your breads is $" + newBreadsTotal);
 
 
     }
