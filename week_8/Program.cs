@@ -30,10 +30,14 @@ namespace Bakery.Models
       Console.WriteLine("How many BREADS would you like?            ");
       string breads = Console.ReadLine();
       int breadsTotal = int.Parse(breads);
+      
       Console.WriteLine("How many PASTRIES would you like?");
       string pastry = Console.ReadLine();
       int pastryTotal = int.Parse(pastry);
-      
+      Console.WriteLine("Processing order...");
+      Console.WriteLine("The cost of your breads is $");
+
+
     }
   }
 }
