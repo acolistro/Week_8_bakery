@@ -13,10 +13,19 @@ namespace Bakery.Models
       Price = price;
     }
 
-    // public int Bogo()
-    // {
-        
-    // }
+    public int Bogo(int breadsTotal)
+    {
+        int breadsCost = 0;
+       if (breadsTotal % 2 == 0)
+       {
+          breadsCost = ((breadsTotal/2)*5);
+       }
+       else
+       {
+          breadsCost = ((((breadsTotal -1)/2)*5)+5);   
+       }
+       return breadsCost;
+    }
 
   }
 
