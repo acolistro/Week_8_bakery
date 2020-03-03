@@ -33,11 +33,24 @@ namespace Bakery.Models
       public string PastryType{ get; set; }
       public int Price{ get; set; }
 
-      public Pastry(string pastryType, int price)
+      public Pastry(int price)
       {
-        PastryType = pastryType;
+        // PastryType = pastryType;
         Price = price;
       }
+    public void pastDeal(int pastriesTotal)
+    {
+        int pastriesCost = 0;
+        if (pastriesTotal % 3 == 0)
+        {
+          pastriesCost = ((pastriesTotal/3)*5);
+        }
+        else
+        {
+          pastriesCost = (((pastriesTotal %3)*2)*5);   
+        }
+    }
   }
+
 
 }

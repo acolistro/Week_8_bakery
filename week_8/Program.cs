@@ -10,6 +10,7 @@ namespace Bakery.Models
     static void Main()
     {
       Bread newBreadOrder = new Bread(5);
+      Pastry newPastryOrder = new Pastry(2);
       Order newOrder = new Order(0,0,0);
       Console.WriteLine("Welcome to Fresh Out the Coven Bakery!");
       Console.WriteLine("Please take a look at our menu before placing your order:");
@@ -32,11 +33,15 @@ namespace Bakery.Models
       Console.WriteLine("      Please place your order here:        ");
       Console.WriteLine("Please list the BREADS you would you like, separated by commas:");
       string breads = Console.ReadLine();
+      Console.WriteLine("Please list the PASTRIES you would you like, separated by commas:");
+      string pastries = Console.ReadLine();
+      Console.WriteLine("Please confirm your order!");
       newOrder.newBreadsOrder(breads);
-      Console.WriteLine("How many PASTRIES would you like?");
-      string pastry = Console.ReadLine();
-      int pastryTotal = int.Parse(pastry);
+      newOrder.newPastriesOrder(pastries);
+      Console.WriteLine("Is this correct? y/n");
       Console.WriteLine("Processing order...");
+    //   newBreadOrder.Bogo(breadsTotal);
+    //   newPastryOrder.pastDeal(pastriesTotal);
     //   Console.WriteLine("The cost of your breads is $" + newBreadsTotal);
 
 

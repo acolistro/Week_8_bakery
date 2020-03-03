@@ -23,6 +23,17 @@ namespace Bakery.Models
       {
         Console.WriteLine("Bread:" + bread);
       }
+      // public int breadsTotal = breadsArr.Length;
+    }
+
+    public void newPastriesOrder(string pastries)
+    {
+      string[] pastriesArr = pastries.Split(", ");
+      // public int pastriesTotal = pastriesArr.Length;
+      foreach (string pastry in pastriesArr)
+      {
+        Console.WriteLine("Pastry:" + pastry);
+      }
     }
   }
 }
