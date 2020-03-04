@@ -39,7 +39,24 @@ namespace Bakery.Models
       newOrder.newBreadsOrder(breads);
       newOrder.newPastriesOrder(pastries);
       Console.WriteLine("Is this correct? y/n");
-      Console.WriteLine("Processing order...");
+      string response = Console.ReadLine();
+      if (response == "n")
+        {
+          Console.WriteLine("Please list the BREADS you would you like, separated by commas:");
+          breads = Console.ReadLine();
+          Console.WriteLine("Please list the PASTRIES you would you like, separated by commas:");
+          pastries = Console.ReadLine();
+          Console.WriteLine("Please confirm your order!");
+          newOrder.newBreadsOrder(breads);
+          newOrder.newPastriesOrder(pastries);
+          Console.WriteLine("Is this correct? y/n");
+          response = Console.ReadLine();
+        }
+        else if (response == "y")
+        {
+          Console.WriteLine("Processing order...");
+        }
+
     //   newBreadOrder.Bogo(breadsTotal);
     //   newPastryOrder.pastDeal(pastriesTotal);
     //   Console.WriteLine("The cost of your breads is $" + newBreadsTotal);
