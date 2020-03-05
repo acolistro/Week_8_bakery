@@ -38,7 +38,7 @@ namespace Bakery.Models
         // PastryType = pastryType;
         Price = price;
       }
-    public void pastDeal(int pastriesTotal)
+    public int PastDeal(int pastriesTotal)
     {
         int pastriesCost = 0;
         if (pastriesTotal % 3 == 0)

@@ -37,23 +37,24 @@ namespace Bakery.Models
       string pastries = Console.ReadLine();
       Console.WriteLine("Please confirm your order!");
       string[] breadsArr = breads.Split(", ");
+      string[] pastriesArr = pastries.Split(", ");
       int breadsTotal = breadsArr.Length;
+      int pastriesTotal = pastriesArr.Length;
+      int costB = newBreadOrder.Bogo(breadsTotal);
+      int costP = newPastryOrder.PastDeal(pastriesTotal);
       newOrder.newBreadsOrder(breadsArr);
-      int cost = newBreadOrder.Bogo(breadsTotal);
-      Console.WriteLine("The total for your BREADS is: $" + cost);
-
-      newOrder.newPastriesOrder(pastries);
+      Console.WriteLine("The total for your BREADS is: $" + costB);
+      newOrder.newPastriesOrder(pastriesArr);
+      Console.WriteLine("The total for your PASTRIES is: $" + costP);
       Console.WriteLine("Is this correct? y/n");
       string response = Console.ReadLine();
       if (response == "n")
         {
-          Console.WriteLine("Please list the BREADS you would you like, separated by commas:");
-          breads = Console.ReadLine();
-          Console.WriteLine("Please list the PASTRIES you would you like, separated by commas:");
-          pastries = Console.ReadLine();
+          newOrder.newBreadsOrder(breadsArr);
+          Console.WriteLine("The total for your BREADS is: $" + costB);
+          newOrder.newPastriesOrder(pastriesArr);
+          Console.WriteLine("The total for your PASTRIES is: $" + costP);
           Console.WriteLine("Please confirm your order!");
-          newOrder.newBreadsOrder(breads);
-          newOrder.newPastriesOrder(pastries);
           Console.WriteLine("Is this correct? y/n");
           response = Console.ReadLine();
         }

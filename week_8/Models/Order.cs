@@ -26,10 +26,8 @@ namespace Bakery.Models
       }
     }
 
-    public void newPastriesOrder(string pastries)
+    public void newPastriesOrder(string[] pastriesArr)
     {
-      string[] pastriesArr = pastries.Split(", ");
-      // public int pastriesTotal = pastriesArr.Length;
       foreach (string pastry in pastriesArr)
       {
         Console.WriteLine("Pastry:" + pastry);
