@@ -57,18 +57,29 @@ namespace Bakery.Models
           Console.WriteLine("The total for your BREADS is: $" + costB);
           newOrder.newPastriesOrder(pastriesArr);
           Console.WriteLine("The total for your PASTRIES is: $" + costP);
+          Console.WriteLine("The grand total for your order is: $" + orderCost +".00");
           Console.WriteLine("Please confirm your order!");
           Console.WriteLine("Is this correct? y/n");
           response = Console.ReadLine();
         }
         else if (response == "y")
         {
-          Console.WriteLine("Processing order...");
+          Console.WriteLine("Would you like to submit your order? (y/n");
+          string confirm = Console.ReadLine();
+          if (confirm == "y")
+          {
+            Console.WriteLine("Processing order...");
+            Console.WriteLine("YOUR ORDER HAS BEEN PLACED!");
+            Console.WriteLine("+++++++order+summary+++++++");
+            newOrder.newBreadsOrder(breadsArr);
+            newOrder.newPastriesOrder(pastriesArr);
+            Console.WriteLine("PAID $" + orderCost +".00 PAID");
+          }
+          else if (confirm == "n")
+          {
+            Console.WriteLine("Your order has been CANCELLED");
+          }
         }
-
-    //   newBreadOrder.Bogo(breadsTotal);
-    //   newPastryOrder.pastDeal(pastriesTotal);
-    //   Console.WriteLine("The cost of your breads is $" + newBreadsTotal);
 
 
     }
