@@ -45,10 +45,19 @@ namespace Bakery.Models
         {
           pastriesCost = ((pastriesTotal/3)*5);
         }
-        else
+        else if (pastriesTotal < 3)
         {
-          pastriesCost = (((pastriesTotal %3)*2)*5);   
+          pastriesCost = (pastriesTotal*2);   
         }
+        else if (pastriesTotal % 3 == 1)
+        {
+          pastriesCost = ((((pastriesTotal -1)/3)*5)+2);
+        }
+        else if (pastriesTotal % 3 == 2)
+        {
+          pastriesCost = ((((pastriesTotal -2)/3)*5)+4);
+        }
+        return pastriesCost;
     }
   }
 

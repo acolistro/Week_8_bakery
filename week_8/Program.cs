@@ -42,10 +42,13 @@ namespace Bakery.Models
       int pastriesTotal = pastriesArr.Length;
       int costB = newBreadOrder.Bogo(breadsTotal);
       int costP = newPastryOrder.PastDeal(pastriesTotal);
+      int orderCost = costB + costP;
+      Console.WriteLine("Your current order:");
       newOrder.newBreadsOrder(breadsArr);
-      Console.WriteLine("The total for your BREADS is: $" + costB);
       newOrder.newPastriesOrder(pastriesArr);
-      Console.WriteLine("The total for your PASTRIES is: $" + costP);
+      Console.WriteLine("The total for your BREADS is: $" + costB + ".00");
+      Console.WriteLine("The total for your PASTRIES is: $" + costP + ".00");
+      Console.WriteLine("The grand total for your order is: $" + orderCost +".00");
       Console.WriteLine("Is this correct? y/n");
       string response = Console.ReadLine();
       if (response == "n")
