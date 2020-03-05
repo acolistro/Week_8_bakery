@@ -80,8 +80,6 @@ namespace Bakery.Models
             Console.WriteLine("Your order has been CANCELLED");
           }
         }
-
-
     }
   }
 }

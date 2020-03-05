@@ -17,7 +17,7 @@ _Console application where a user can view a "menu" of a bakery, choose what bre
 |Application returns the user-entered strings back to user as a list to review with estimated cost, taking into account special pricing. |  "French, Italian, Rye" | Bread: French; Bread: Italian; Bread: Rye; Cost of BREADS: $10.00; Total Order Cost: $10.00 |
 |Application allows user to re-enter order if corrections are needed (is this correct (y/n))  | "n" | "Please enter the BREADS you would like:"|
 |Application allows user to "confirm" their order (y/n), returning the order summary | "y" | "Your order: Breads: French, Italian, Rye; Total Cost: $10.00" |
-|Application allows user to "cancel" order (y/n) | "y" | "Your order has been cancelled." |
+
 
 ## Setup/Installation Requirements
 
