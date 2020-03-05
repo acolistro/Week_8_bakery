@@ -11,7 +11,7 @@ namespace Bakery.Models
     {
       Bread newBreadOrder = new Bread(5);
       Pastry newPastryOrder = new Pastry(2);
-      Order newOrder = new Order(0,0,0);
+      Order newOrder = new Order(0,0,0,0);
       Console.WriteLine("Welcome to Fresh Out the Coven Bakery!");
       Console.WriteLine("Please take a look at our menu before placing your order:");
       Console.WriteLine("===========================================");
@@ -36,7 +36,12 @@ namespace Bakery.Models
       Console.WriteLine("Please list the PASTRIES you would you like, separated by commas:");
       string pastries = Console.ReadLine();
       Console.WriteLine("Please confirm your order!");
-      newOrder.newBreadsOrder(breads);
+      string[] breadsArr = breads.Split(", ");
+      int breadsTotal = breadsArr.Length;
+      newOrder.newBreadsOrder(breadsArr);
+      int cost = newBreadOrder.Bogo(breadsTotal);
+      Console.WriteLine("The total for your BREADS is: $" + cost);
+
       newOrder.newPastriesOrder(pastries);
       Console.WriteLine("Is this correct? y/n");
       string response = Console.ReadLine();

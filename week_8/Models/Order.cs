@@ -8,22 +8,22 @@ namespace Bakery.Models
     public int OrderTotal{ get; set; }
     public int BreadsOrder{ get; set; }
     public int PastryOrder{ get; set; }
+    public int BreadsTotal{ get; set; }
 
-    public Order(int orderTotal, int breadsOrder, int pastryOrder)
+    public Order(int orderTotal, int breadsOrder, int pastryOrder, int breadsTotal)
     {
       OrderTotal = orderTotal;
       BreadsOrder = breadsOrder;
       PastryOrder = pastryOrder;
+      BreadsTotal = breadsTotal;
     }
 
-    public void newBreadsOrder(string breads)
+    public void newBreadsOrder(string[] breadsArr)
     {
-      string[] breadsArr = breads.Split(", ");
       foreach (string bread in breadsArr)
       {
         Console.WriteLine("Bread:" + bread);
       }
-      // public int breadsTotal = breadsArr.Length;
     }
 
     public void newPastriesOrder(string pastries)

@@ -13,7 +13,7 @@ namespace Bakery.Models
       Price = price;
     }
 
-    public void Bogo(int breadsTotal)
+    public int Bogo(int breadsTotal)
     {
         int breadsCost = 0;
        if (breadsTotal % 2 == 0)
@@ -24,8 +24,8 @@ namespace Bakery.Models
        {
           breadsCost = ((((breadsTotal -1)/2)*5)+5);   
        }
+       return breadsCost;
     }
-
   }
 
   public class Pastry
