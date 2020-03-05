@@ -13,7 +13,7 @@ namespace Bakery.Models
       Price = price;
     }
 
-    public void Bogo(int breadsTotal)
+    public int Bogo(int breadsTotal)
     {
         int breadsCost = 0;
        if (breadsTotal % 2 == 0)
@@ -24,8 +24,8 @@ namespace Bakery.Models
        {
           breadsCost = ((((breadsTotal -1)/2)*5)+5);   
        }
+       return breadsCost;
     }
-
   }
 
   public class Pastry
@@ -33,11 +33,33 @@ namespace Bakery.Models
       public string PastryType{ get; set; }
       public int Price{ get; set; }
 
-      public Pastry(string pastryType, int price)
+      public Pastry(int price)
       {
-        PastryType = pastryType;
+        // PastryType = pastryType;
         Price = price;
       }
+    public int PastDeal(int pastriesTotal)
+    {
+        int pastriesCost = 0;
+        if (pastriesTotal % 3 == 0)
+        {
+          pastriesCost = ((pastriesTotal/3)*5);
+        }
+        else if (pastriesTotal < 3)
+        {
+          pastriesCost = (pastriesTotal*2);   
+        }
+        else if (pastriesTotal % 3 == 1)
+        {
+          pastriesCost = ((((pastriesTotal -1)/3)*5)+2);
+        }
+        else if (pastriesTotal % 3 == 2)
+        {
+          pastriesCost = ((((pastriesTotal -2)/3)*5)+4);
+        }
+        return pastriesCost;
+    }
   }
+
 
 }
